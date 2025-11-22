@@ -48,6 +48,32 @@ jobs:
             "SaveLocalCopy": ${{ github.event.inputs.saveLocalCopy || false }},
             "IncludeTimeInHRZones": false,
             "IncludeTimeInPowerZones": false,
+            "DeviceInfoSettings": {
+            "none": {
+              "name": "Garmin Device",
+              "unitId": 1,
+              "productID": 4025,
+              "manufacturerId": 1,
+              "version": {
+                "versionMajor": 34,
+                "versionMinor": 13,
+                "buildMajor": 0,
+                "buildMinor": 0
+              }
+            },
+            "cycling": {
+              "name": "Garmin Device",
+              "unitId": 1,
+              "productID": 4025,
+              "manufacturerId": 1,
+              "version": {
+                "versionMajor": 34,
+                "versionMinor": 13,
+                "buildMajor": 0,
+                "buildMinor": 0
+              }
+            }
+          },
             "StackedWorkouts": {
               "AutomaticallyStackWorkouts": false,
               "MaxAllowedGapSeconds": 300
@@ -92,6 +118,7 @@ jobs:
         name: output
         path: ${{ env.OUTPUT_DIR }}
         if-no-files-found: error
+
 
 
 
